@@ -6,9 +6,4 @@ seaborn
 requests
 biopython
 rdkit
-'''io
-webbrowser
-rdkit.Chem 
-random
-base64'''
 
