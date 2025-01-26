@@ -3,7 +3,7 @@ import os
 
 def home_page():
     # Title of the home page
-    st.title("Welcome to the Breast Cancer Research Hub")
+    #st.title("Welcome to the Breast Cancer Research Hub")
 
     # Subheader and Text about Breast Cancer
     st.subheader("What is Breast Cancer?")
