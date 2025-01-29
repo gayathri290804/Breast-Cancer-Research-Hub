@@ -7,7 +7,7 @@ import base64
 
 def upload_excel():
     # Define the path to your Excel file
-    file_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\extra\\Final Data.xlsx"
+    file_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\Final Data.xlsx"
     try:
         # Load the workbook
         wb = load_workbook(file_path, data_only=True)
