@@ -46,7 +46,7 @@ def main():
 
     with col2:
         # Check if the image exists using a relative path
-        image_path = os.path.join("extra", "breast-cancer.png")
+        image_path = os.path.join("C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\breast-cancer.png")
         if os.path.exists(image_path):
             st.image(image_path, width=500)
         else:
