@@ -8,7 +8,7 @@ def pubchem():
     st.title("Public Chemical Repository:")
     
     # Use a relative path to the image
-    image_path = "extra/pubchem.png"  # Ensure this file exists in the 'extra' folder of your project
+    image_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\pubchem.png"  # Ensure this file exists in the 'extra' folder of your project
 
     # Convert the image to Base64
     def get_base64_image(image_path):
