@@ -25,7 +25,7 @@ def home_page():
     st.subheader("Breast Cancer Awareness")
 
     # Use relative path and add fallback handling
-    image_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\extra\\Breast cancer .png"
+    image_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\Breast cancer .png"
     if os.path.exists(image_path):
         st.image(image_path, caption="Breast Cancer Awareness")
     else:
