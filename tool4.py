@@ -37,7 +37,8 @@ def pubchem():
     
     st.subheader("PubChem is a valuable resource in breast cancer research, providing comprehensive data on chemical compounds, bioactivities, and their interactions with biological targets. Researchers use PubChem to explore potential therapeutic agents, study molecular mechanisms, and identify drug candidates for breast cancer treatment.")
 
-    compound_name = st.text_input("Enter Compound Name: (e.g., Volasertib)")
+    # Add a unique key for the text input widget
+    compound_name = st.text_input("Enter Compound Name: (e.g., Volasertib)", key="pubchem_input_unique")
 
     if compound_name:
         # PubChem API endpoint
@@ -105,6 +106,3 @@ def pubchem():
                 st.warning("No detailed properties found for the compound.")
         else:
             st.error("Compound not found or request failed.")
-
-# Run the function (replace this with Streamlit run logic in your app)
-pubchem()
