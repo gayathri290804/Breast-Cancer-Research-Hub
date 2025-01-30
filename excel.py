@@ -4,12 +4,11 @@ from openpyxl import load_workbook
 import os
 
 def upload_excel():
-    # Define the path to your Excel file
-    file_path = r"C:\Users\sasid\OneDrive\Desktop\product developement\Streamlit app\Final Data.xlsx"
-
+    # Define the relative path to your Excel file
+    file_path = "Final Data.xlsx"  # Using relative path
 
     if not os.path.exists(file_path):
-        st.error(f"Error: The file '{file_path}' was not found. Please check the path and try again.")
+        st.error(f"Error: The file '{file_path}' was not found. Please check if it is uploaded to the repository.")
         return
 
     try:
@@ -105,4 +104,3 @@ def upload_excel():
 
     except Exception as e:
         st.error(f"An error occurred while loading the Excel file: {e}")
-
