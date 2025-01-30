@@ -1,13 +1,16 @@
 import streamlit as st
 import pandas as pd
 from openpyxl import load_workbook
-import streamlit.components.v1 as components
-import base64
-
+import os
 
 def upload_excel():
     # Define the path to your Excel file
     file_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\Final Data.xlsx"
+
+    if not os.path.exists(file_path):
+        st.error(f"Error: The file '{file_path}' was not found. Please check the path and try again.")
+        return
+
     try:
         # Load the workbook
         wb = load_workbook(file_path, data_only=True)
@@ -65,8 +68,6 @@ def upload_excel():
             # Convert the DataFrame to an HTML table
             st.markdown(df.to_html(escape=False, index=False), unsafe_allow_html=True)
 
-      
-       
         # Apply CSS styles
         st.markdown("""
             <style>
@@ -100,9 +101,7 @@ def upload_excel():
                 }
             </style>
         """, unsafe_allow_html=True)
-       
 
-           
     except Exception as e:
-        st.error(f"Error loading Excel file: {e}")
+        st.error(f"An error occurred while loading the Excel file: {e}")
 
