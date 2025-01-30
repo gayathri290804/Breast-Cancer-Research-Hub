@@ -45,8 +45,8 @@ def main():
         st.title("Breast Cancer Research Hub")
 
     with col2:
-        # Check if the image exists using a relative path
-        image_path = os.path.join("C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\breast-cancer.png")
+        # Use relative path for the image
+        image_path = "breast-cancer.png"
         if os.path.exists(image_path):
             st.image(image_path, width=500)
         else:
