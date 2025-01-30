@@ -8,7 +8,7 @@ def pubchem():
     st.title("Public Chemical Repository:")
     
     # Use a relative path to the image
-    image_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\pubchem.png"  # Ensure this file exists in the 'extra' folder of your project
+    image_path = "pubchem.png"  # Adjust path based on where the image is located in your project
 
     # Convert the image to Base64
     def get_base64_image(image_path):
@@ -16,7 +16,7 @@ def pubchem():
             with open(image_path, "rb") as img_file:
                 return base64.b64encode(img_file.read()).decode()
         except FileNotFoundError:
-            st.error("Background image file not found. Please ensure the 'pubchem.png' file is in the 'extra' folder.")
+            st.error("Background image file not found. Please ensure the 'pubchem.png' file is in the correct folder.")
             return None
 
     base64_image = get_base64_image(image_path)
