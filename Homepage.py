@@ -1,5 +1,11 @@
 import streamlit as st
 import os
+import base64
+
+def get_base64_image(image_path):
+    """Encodes an image as a Base64 string."""
+    with open(image_path, "rb") as img_file:
+        return base64.b64encode(img_file.read()).decode()
 
 def home_page():
     # Title of the home page
@@ -24,10 +30,13 @@ def home_page():
     # Add an image related to Breast Cancer
     st.subheader("Breast Cancer Awareness")
 
-    # Use relative path and add fallback handling
-    image_path = "C:/Users/sasid/OneDrive/Desktop/product developement/Streamlit app/Breast cancer .png"
+    # Corrected path
+    image_path = r"C:\Users\sasid\OneDrive\Desktop\product developement\Streamlit app\Breast cancer .png"
+
     if os.path.exists(image_path):
-        st.image(image_path, caption="Breast Cancer Awareness")
+        base64_image = get_base64_image(image_path)
+        img_html = f'<img src="data:image/png;base64,{base64_image}" alt="Breast Cancer Awareness" width="600">'
+        st.markdown(img_html, unsafe_allow_html=True)
     else:
         st.warning("Image not found. Please check the file path or ensure the image is included in the deployment.")
 
