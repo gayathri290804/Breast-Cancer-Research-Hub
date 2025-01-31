@@ -31,7 +31,7 @@ def home_page():
     st.subheader("Breast Cancer Awareness")
 
     # Corrected path
-    image_path = r"C:\Users\sasid\OneDrive\Desktop\product developement\Streamlit app\Breast cancer .png"
+    image_path = "C:\\Users\\sasid\\OneDrive\\Desktop\\product developement\\Streamlit app\\Breast cancer .png"
 
     if os.path.exists(image_path):
         base64_image = get_base64_image(image_path)
