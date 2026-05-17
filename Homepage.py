@@ -6,7 +6,7 @@ def home_page():
     #st.title("Welcome to the Breast Cancer Research Hub")
 
     # Subheader and Text about Breast Cancer
-    st.subheader("What is Breast Cancer1?")
+    st.subheader("What is Breast Cancer?")
     st.write("""
     Breast cancer is a type of cancer that begins in the cells of the breast. It can occur in both men and women, though it is far more common in women. 
     The cells in the breast tissue divide and grow uncontrollably, forming a lump or tumor. Early detection is crucial for improving survival rates.
