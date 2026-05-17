@@ -56,7 +56,7 @@ def upload_excel():
             if not filtered_df.empty:
                 # Highlight rows matching the query
                 highlight_style = "background-color: grey; font-weight: bold;"
-                df_styles = filtered_df.style.applymap(
+                df_styles = filtered_df.style.map(
                     lambda val: highlight_style if search_query.lower() in str(val).lower() else "",
                 )
                 # Display the filtered and highlighted DataFrame
